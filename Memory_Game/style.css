@@ -1,0 +1,254 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(212, 211, 211, 0.7); /* Dim the background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10; /* Ensure it's above all other content */
+}
+
+.overlay-content {
+    background: #fff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Add your button and input styles here */
+.overlay-content input,
+.overlay-content button {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1em;
+}
+
+.overlay-content button {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+
+.overlay-content button:hover {
+    background-color: #367c39;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* General body styling */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: gray;
+}
+
+.main-wrapper {
+    display: flex;
+    align-items: center; /* Align vertically */
+    justify-content: center; /* Align horizontally */
+    gap: 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    background: rgb(206, 201, 201);
+    padding: 40px;
+    /* If you want a fixed width, uncomment the next line */
+    /* width: 600px; Adjust as needed */
+}
+
+.bottom-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 0; /* Add some padding at the top and bottom */
+}
+
+.player-info {
+    margin: 0; /* Reset any margin */
+    font-size: 1.2em;
+    
+}
+
+.name-input-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+#playerName {
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    width: 100%; /* Makes the input take the full width of the sidebar */
+}
+
+/* Styling for the start game button */
+.name-input-section button {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: white;
+    background-color: #4CAF50; /* Example button color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%; /* Makes the button take the full width of the sidebar */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for depth */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.name-input-section button:hover {
+    background-color: #367c39; /* Darker shade on hover */
+}
+
+/* Styling for the game heading */
+h2 {
+    font-size: 3em;
+    color: #333;
+}
+
+/* Styling for the game grid */
+.game {
+    width: 440px;
+    height: 440px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 10px;
+}
+
+/* Styling for the reset button */
+.reset {
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    font-size: 1.5em;
+    padding: 10px 20px;
+    margin-top: -20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.reset:hover {
+    background-color: #ff5252;
+}
+
+.item
+{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    background: white;
+    transform: rotateY(180deg);
+    transition: 0.25s;
+}
+
+.item.boxOpen{
+    transform: rotateY(0deg);
+}
+
+.item::after{
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: #3a0392;
+    opacity: 0,8;
+    transition: 0.25s;
+    transform: rotateY(0deg);
+    backface-visibility: hidden;
+}
+
+.boxOpen:after
+{
+    transform: rotateY(180deg);
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.gameOverMessage {
+    text-align: center;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.startAgain {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.startAgain {
+    margin-top: 20px;
+}
+
+.timer {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: px;
+    /* Additional styling as needed */
+}
+
+.name-input-section {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#playerName {
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.player-info {
+    margin-bottom: 20px;
+    font-size: 1.2em;
+}

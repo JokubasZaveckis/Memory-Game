@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atminties Žaidimas</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+    <!-- Overlay for Name Input -->
+    <div id="nameInputOverlay" class="overlay">
+        <div class="overlay-content">
+            <input type="text" id="playerName" placeholder="Įveskite savo vardą" autofocus>
+            <button onclick="startGame()">Pradėti Žaidimą</button>
+        </div>
+    </div>
+
+    <!-- Main Wrapper -->
+    <div class="main-wrapper">
+        <!-- Game Container -->
+        <div class="container">
+            <h2>Atminties Žaidimas</h2>
+            <div id="timer" class="timer">Liko laiko: 30s</div>
+            <div class="game"></div>
+
+            <!-- Bottom Bar for High Score and Reset Button -->
+            <div class="bottom-bar">
+                <div id="playerInfo" class="player-info">
+                    Geriausi pasiekimai: <br>
+                    <span id="displayName">Player name</span>: <span id="highScore">his highscore</span>
+                </div>
+                <button class="reset" onclick="window.location.reload();">Iš naujo</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Link to the JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
